@@ -24,6 +24,21 @@ int main(int argc, const char * argv[]) {
         for (NSString *sport in sports) {
             NSLog(@"sport: %@\n", sport);
         }
+        
+        NSDictionary *moreSports = [[NSDictionary alloc]
+                                    initWithObjectsAndKeys:
+                                    @"golf", @"⛳️",
+                                    @"hockey", @"🏒",
+                                    @"ufc", @"🥊",
+                                    @"baseball", @"⚾️",
+                                    nil
+                                    ];
+        
+        NSArray *keys = [moreSports allKeys];
+        
+        for (NSString *key in keys) {
+            NSLog(@"the sport is %@\n", moreSports[key]);
+        }
     }
     return 0;
 }
